@@ -36,62 +36,6 @@ alert "Номер не співпадає" або "Сума не співпад�
 //function payFine(){}
 
 
-/*"use strict";
-
-
-let buttonSubmit = document.getElementById("payFine");
-let DB = data.finesData;
-
-let passportRegex = /^[А-ЩЬЮЯҐЄІЇ]{2}\d{6}$/;
-let creditCardRegex = /^\d{16}$/;
-let cvvRegex = /^\d{3}$/;
-
-buttonSubmit.addEventListener('click', payFineOnce);
-
-function payFineOnce() {
-    payFine();
-    buttonSubmit.removeEventListener('click', payFineOnce);
-}
-
-function payFine() {
-    let selectedFine = DB.find(fine => fine.номер === fineNumber.value.trim());
-    console.log('selectedFine:', selectedFine);
-
-    if (!selectedFine) {
-        alert("Штраф з таким номером не знайдено");
-        return;
-    }
-
-    if (parseFloat(selectedFine.сума) !== parseFloat(amount.value)) {
-        alert("Сума не співпадає");
-        return;
-    }
-
-    if (!passportRegex.test(passport.value)) {
-        console.log("Неправильний номер паспорту:", passport.value);
-        alert("Не вірний паспортний номер");
-        return;
-    }
-
-    if (!creditCardRegex.test(creditCardNumber.value)) {
-        console.log("Неправильний номер кредитної картки:", creditCardNumber.value);
-        alert("Не вірна кредитна картка");
-        return;
-    }
-
-    if (!cvvRegex.test(cvv.value)) {
-        console.log("Неправильний CVV код:", cvv.value);
-        alert("Не вірний cvv");
-        return;
-    }
-
-    DB = DB.filter(fine => fine.номер !== fineNumber.value.trim());
-    console.log("DB після видалення:", DB);
-    alert("Оплата пройшла успішно");
-    
-}
-*/
-
 "use strict";
 
 let DB = window.data.finesData;
